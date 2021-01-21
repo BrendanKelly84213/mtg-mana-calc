@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, #side, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, #side, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+/* end of Eric's Reset styles */
+
+@font-face {
+	font-family: magic;
+	src: url("fonts/magic.ttf");
+}
+
+body {
+
+	font-size: 1.2em;
+	font-family: magic, arial, verdana, sans-serif, Times, serif;
+	background-color:#121212 ;
+	color: #121E16;
+	opacity: 80%;
+	/*max-width: 20em;*/
+	/*margin:  0.5em auto 2em auto;*/
+}
+
+h1 {
+	font-size: 2em;
+}
+
+.container {
+	text-align: center;
+}
+.container h1 {
+	font-size: 1.4em;
+}
+
+table {
+	margin: 1em auto 1em auto;
+}
+
+table td {
+	border: 1px solid #999;
+	padding:1em;
+}
+
+p {
+	margin: 1em 0;
+}
+
+header {
+	/*margin: 0 1em ;*/
+	background-color:#8B5A2B;
+	text-align: center;
+	padding: 0.5em 2em;
+}
+
+.container {
+	margin: 1em;
+	padding: 1em;
+	background-color:#8B5A2B;
+	border-radius: 15px 15px 15px 15px;
+}
+
+input {
+	font-family: magic, arial, verdana, sans-serif, Times, serif;
+	font-size: 1em;
+	background-color: #545454;
+	opacity:80%;
+	color: white;
+}
+
+@media only screen and (min-width: 30em){
+	body {
+		max-width:100%;
+	}
+
+	table {
+		table-layout: fixed;
+		width: 9em;
+		padding: 0;
+	}
+
+	table td {
+		padding: 1em;
+	}
+
+	#box {
+		max-width: 40em;
+		margin: 0 auto 0 auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.container {
+		text-align: left;
+	}
+
+	#spread-container {
+		text-align:center;
+		height: 250px;
+		width: 200px;
+	}
+}

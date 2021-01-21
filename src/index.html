@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>MTG Mana Calculator</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- d3 library for drawing charts -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Very simple header -->
+  <header>
+    <h1>Mana Calculator</h1>
+  </header>
+
+  <div id="box">
+    <!-- Form for input data -->
+    <form id="colors" action="" method="POST" class="container">
+      <h1>Mana Costs</h1>
+      <p>
+        <label for="deck-size">Deck Size (init: 60)</label><br/>
+        <input name="deck-size" id="deck-size" />
+      </p>
+      <p>
+        <label for="total-spells">Total Spells</label><br/>
+        <input name="total-spells" id="total-spells" />
+      </p>
+      <p>
+        <label for="red">Red</label> <br/>
+        <input name="red" id="red" class="color" />
+      </p>
+      <p>
+        <label for="blue">Blue</label> <br/>
+        <input name="blue" id="blue" class="color" />
+      </p>
+      <p>
+        <label for="green">Green</label> <br/>
+        <input name="green" id="green" class="color" />
+      </p>
+      <p>
+        <label for="black">Black</label> <br/>
+        <input name="black" id="black" class="color" />
+      </p>
+      <p>
+        <label for="white">White</label> <br/>
+        <input name="white" id="white" class="color" />
+      </p>
+    </form>
+
+    <!-- Output data is placed in this table -->
+    <div class="container" id="table">
+      <h1>Mana Spread</h1>
+      <table>
+        <tr id="total-lands">
+          <td>Lands </td>
+          <td>0</td>
+        </tr>
+        <tr id="red-result">
+          <td>Red </td>
+          <td>0</td>
+        </tr>
+        <tr id="blue-result">
+          <td>Blue </td>
+          <td>0</td>
+        </tr>
+        <tr id="green-result">
+          <td>Green </td>
+          <td>0</td>
+        </tr>
+        <tr id="black-result">
+          <td>Black </td>
+          <td>0</td>
+        </tr>
+        <tr id="white-result">
+          <td>White </td>
+          <td>0</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Results go here -->
+    <div id="spread-container" class="container">
+      <h1>Color Wheel</h1>
+      <!-- Visual representation of results 
+	 data placed here as svg in js -->
+      <div id="mana-spread"></div>
+    </div>
+
+    <!-- Script for showing results data -->
+    <script src="js/calc.js"></script>
+
+  </div>
+</body>
+
+</html>
